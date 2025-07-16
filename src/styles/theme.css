@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import url("https://use.typekit.net/kfl8roj.css");
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+
 
 @tailwind base;
 @tailwind components;
@@ -8,27 +9,15 @@
 
 @layer base {
     h1 {
-        @apply font-heading text-black text-center text-9xl py-5;
     }
 
     h2 {
-        @apply font-subheading text-black font-bold text-center text-6xl py-5;
+        
     }
 
     body {
-        @apply font-body-text text-black text-3xl text-center;
+
     }
-}
-.DMSerif {
-    font-family: 'DM Serif Display', serif;
-}
-
-.Seasons {
-    font-family: 'the-seasons', serif;
-}
-
-.Lexend {
-    font-family: 'Lexend', sans-serif;
 }
 
 @layer components {
