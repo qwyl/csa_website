@@ -22,7 +22,7 @@ const NavBar = () => {
         <nav
             className={`h-20 top-0 ${
                 scrolled
-                    ? 'bg-light-brown shadow-xl shadow-slate-700/10' 
+                    ? 'bg-[#EDEBEC] shadow-xl shadow-slate-700/10' 
                     : 'bg-transparent'
             } transition-all z-50 fixed w-screen flex gap-3- select-none ease-in-out duration-300 px-10 py-2 items-center justify-between`}
         >
@@ -33,17 +33,16 @@ const NavBar = () => {
                     navigate('/')
                 }}
             >
-                {/*<img src={MemssaLogo} className='h-16 w-16 pointer-events-none' />
+                <img src="/csa_logo.jpg" className='h-20 w-20 my-6' />
 
-                {scrolled && (
-                    <h1 className='text-2xl font-bold text-dark-red ml-4'>
-                        MEMSSA
-                    </h1>
-                )}*/}
+                <h1 className='text-2xl font-bold text-[#A9A9A9] ml-1'>
+                    CSA
+                </h1>
+             
             </div>
             <ul
                 id='navbar-items-container'
-                className='flex justify-between gap-6 font-bold text-lg'
+                className='flex justify-between gap-6 font-medium text-lg'
             >
                 {NAV_BAR_ITEMS.map((item) => {
                     const { path, label, subItems} = item
