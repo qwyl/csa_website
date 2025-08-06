@@ -18,7 +18,7 @@ function Home() {
   const event1 = "/assets/images/events/mahjong/spring_2025/mahjong.jpg"
   const event2 = "/assets/images/events/mango_sago/spring_2025/mango_sago.jpg"
   const event3 = "/assets/images/events/mid_autumn_festival/spring_2025/midautumn.jpg"
-  const event4 = "public/assets/images/events/shuaige/spring_2025/shuaige.jpg"
+  const event4 = "/assets/images/events/shuaige/spring_2025/shuaige.jpg"
 
   const allImages = [
     finance, pic2, pic3, atv, pic5

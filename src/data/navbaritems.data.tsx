@@ -18,9 +18,9 @@ export interface NavBarItem {
 }
 
 export const NAV_BAR_ITEMS: NavBarItem[] = [
-    { path: '/', label: 'Home', component: Home},
-    { path: '/about', label: 'About Us', component: About},
-    { path: '/events', label: 'Events', component: Events},
-    { path: '/ourteam', label: 'Our Team', component: OurTeam},
-    { path: '/joinus', label: 'Join Us', component: JoinUs},
+    { path: '/', label: 'Home', component: () => <Home />},
+    { path: '/about', label: 'About Us', component: () => <About />},
+    { path: '/events', label: 'Events', component: () => <Events />},
+    { path: '/ourteam', label: 'Our Team', component: () => <OurTeam />},
+    { path: '/joinus', label: 'Join Us', component: () => <JoinUs />},
 ]
