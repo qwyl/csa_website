@@ -6,22 +6,26 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function Home() {
   // image srcs:
-  const star = "/star.jpg";
-  const softstar = "/softstar.jpg";
-  const year = "/2025.jpg";
-  const csa_sticker = "/csa_sticker.jpg";
-  const finance = "/finance.jpg";
-  const atv = "/atv.jpg";
-  const pic2 = "/pic2.jpg";
-  const pic3 = "/pic3.jpg";
-  const pic5 = "/pic5.jpg";
+  const star = "/assets/images/misc/star.jpg";
+  const softstar = "/assets/images/misc/softstar.jpg";
+  const year = "/assets/images/misc/2025.jpg";
+  const csa_sticker = "/assets/images/misc/csa_sticker.jpg";
+  const finance = "/assets/images/departments/finance/spring_2025/finance.jpg";
+  const atv = "/assets/images/events/retreat/spring_2025/atv.jpg";
+  const pic2 = "/assets/images/misc/spring_2025/pic2.jpg";
+  const pic3 = "/assets/images/departments/pr_design/spring_2025/pic3.jpg";
+  const pic5 = "/assets/images/departments/pr_design/spring_2025/pr_design.jpg";
+  const event1 = "/assets/images/events/mahjong/spring_2025/mahjong.jpg"
+  const event2 = "/assets/images/events/mango_sago/spring_2025/mango_sago.jpg"
+  const event3 = "/assets/images/events/mid_autumn_festival/spring_2025/midautumn.jpg"
+  const event4 = "public/assets/images/events/shuaige/spring_2025/shuaige.jpg"
 
   const allImages = [
     finance, pic2, pic3, atv, pic5
   ];
 
   const eventImages = [
-    "/shuaige.jpg", "/midautumn.jpg", "/mahjong.jpg", "/mango_sago.jpg"
+    event1, event2, event3, event4
   ];
 
   const eventNames = [
@@ -70,7 +74,7 @@ function Home() {
           </div>
           {/* GROUP PHOTO DIV */}
           <div className="flex flex-col relative p-10">
-            <div className="w-[97%] h-[650px] mx-auto rounded-[40px] bg-[url(/group.jpg)] bg-cover bg-center shadow-lg shadow-gray-700">
+            <div className="w-[97%] h-[650px] mx-auto rounded-[40px] bg-[url(/assets/images/departments/everyone/spring_2025/group.jpg)] bg-cover bg-center shadow-lg shadow-gray-700">
               {/* absolute top-[330px] right-[300px] */}
             </div>
             {/* STICKERS BELOW ARE ROUGHLY RESPONSIVE */}
@@ -137,17 +141,17 @@ function Home() {
               <div className="flex flex-row">
                 <a
                   href="mailto:csaberkeley@gmail.com"
-                  className={`bg-[url(/gmail.jpg)] bg-center bg-no-repeat bg-[length:40px_30px] w-[65px] h-[63px] mr-3 rounded-full overflow-hidden bg-[#4F4E4E69] border-[3px] border-[#D9D9D980] icon-shadow`}
+                  className={`bg-[url(/assets/images/misc/gmail.jpg)] bg-center bg-no-repeat bg-[length:40px_30px] w-[65px] h-[63px] mr-3 rounded-full overflow-hidden bg-[#4F4E4E69] border-[3px] border-[#D9D9D980] icon-shadow`}
                 >
                 </a>
                 <a
                   href="https://www.instagram.com/csaberkeley/"
-                  className={`bg-[url(/instagram.jpg)] bg-center bg-no-repeat bg-[length:72px_50px] w-[65px] h-[63px] mr-3 rounded-full bg-[#4F4E4E69] border-[3px] border-[#D9D9D980] icon-shadow`}
+                  className={`bg-[url(/assets/images/misc/instagram.jpg)] bg-center bg-no-repeat bg-[length:72px_50px] w-[65px] h-[63px] mr-3 rounded-full bg-[#4F4E4E69] border-[3px] border-[#D9D9D980] icon-shadow`}
                 >
                 </a>
                 <a
                   href="https://linktr.ee/csaberkeley?utm_source=linktree_profile_share&ltsid=d8e13ff2-dd43-48c4-a878-56aada9248e6"
-                  className={`bg-[url(/linktree.jpg)] bg-center bg-no-repeat bg-[length:35px_40px] w-[65px] h-[63px] rounded-full bg-[#4F4E4E69] border-[3px] border-[#D9D9D980] icon-shadow`}
+                  className={`bg-[url(/assets/images/misc/linktree.jpg)] bg-center bg-no-repeat bg-[length:35px_40px] w-[65px] h-[63px] rounded-full bg-[#4F4E4E69] border-[3px] border-[#D9D9D980] icon-shadow`}
                 >
                 </a>
               </div>

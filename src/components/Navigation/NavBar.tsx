@@ -33,7 +33,7 @@ const NavBar = () => {
                     navigate('/')
                 }}
             >
-                <img src="/csa_logo.jpg" className='h-20 w-20 my-6' />
+                <img src="/assets/images/misc/csa_logo.jpg" className='h-20 w-20 my-6' />
 
                 <h1 className='text-2xl font-bold text-[#A9A9A9] ml-1'>
                     CSA
