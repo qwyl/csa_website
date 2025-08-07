@@ -5,7 +5,7 @@ type Props = {
 };
 
 export const EventCard = ({ event }: Props) => (
-  <div className="rounded-lg shadow-md overflow-hidden border border-gray-200">
+  <div className="w-[300px] h-[400px] rounded-lg shadow-md overflow-hidden border border-gray-200">
     <img
       src={event.image}
       alt={event.title}

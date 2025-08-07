@@ -1,6 +1,8 @@
 import { events } from "../data/events.ts";
 import { splitEvents } from "../utils/splitEvents";
 import { EventCard } from "../components/events/EventCard.tsx";
+import { motion } from "framer-motion";
+
 
 const star = "/assets/images/misc/star.jpg";
 
@@ -13,7 +15,7 @@ function Events() {
         {/* Hero Section - title and description */}
         <div className="text-left mb-16">
           <h1 className="mb-6 font-normal italic text-[#AF383C] text-[60px] leading-none custom-text-shadow custom-text-stroke">
-            EVENTS
+            OUR EVENTS
           </h1>
           <div className="col-start-2 flex">
             <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 55 55" fill="none">
@@ -26,39 +28,39 @@ function Events() {
           </div>
         </div>
 
-        <div className="px-6 py-12 max-w-5xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">CSA Events</h1>
-
-          {upcoming.length > 0 && (
-            <section className="mb-12">
-              <h2 className="text-2xl font-semibold mb-4">Upcoming Events</h2>
-              <div className="grid gap-6 sm:grid-cols-2">
-                {upcoming.map((event) => (
-                  <EventCard key={event.title} event={event} />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {past.length > 0 && (
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">Past Events</h2>
-              <div className="grid gap-6 sm:grid-cols-2">
-                {past.map((event) => (
-                  <EventCard key={event.title} event={event} />
-                ))}
-              </div>
-            </section>
-          )}
-        </div>
-        {/* Upcoming events section */}
         <div>
+          <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-[25px] p-8 shadow-lg"
+          >
+              {upcoming.length > 0 && (
+                <section className="mb-12">
+                  <h2 className="text-[#AF383C] text-[32px] font-medium mb-6">Upcoming Events</h2>
+                  <div className="flex flex-wrap justify-start items-start gap-4">
+                    {upcoming.map((event) => (
+                      <div key={event.title} className="w-[300px] ml-3">
+                        <EventCard event={event} />
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
 
-        </div>
-
-        {/* Past events section */}
-        <div>
-
+              {past.length > 0 && (
+                <section>
+                  <h2 className="text-[#AF383C] text-[32px] font-medium mb-6">Past Events</h2>
+                  <div className="flex flex-wrap justify-start items-start gap-4">
+                    {past.map((event) => (
+                      <div key={event.title} className="w-[300px] ml-3">
+                        <EventCard event={event} />
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+          </motion.div>
         </div>
       </div>
   );

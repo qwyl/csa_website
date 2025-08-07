@@ -46,7 +46,7 @@ function About() {
                     </motion.div>
                 </div>
 
-                {/* Left Column - history and mission */}
+                {/* Right Column - history and mission */}
                 <div className="space-y-8">
                     <motion.div 
                         initial={{ opacity: 0, x: -50 }}
