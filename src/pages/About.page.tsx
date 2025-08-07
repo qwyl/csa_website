@@ -65,7 +65,10 @@ function About() {
                         fostering a supportive and inclusive social community for students, alumni, and other groups. We host many 
                         events which allow participants to have fun and meet new people. We promote these values through our events, 
                         such as our annual Lunar New Year Banquet, ShuaiGe Swagoff, Mid-Autumn Festival, cultural cuisine, game nights, 
-                        and more. Everybody is welcome to join us, regardless of background! Join us to find out what CSA is all about!
+                        and more.
+                        </p>
+                        <p className="pt-4 text-lg leading-relaxed">
+                            Everybody is welcome to join us, regardless of background! Join us to find out what CSA is all about!
                         </p>
                     </motion.div>
                 </div>
