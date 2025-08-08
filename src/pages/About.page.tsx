@@ -39,7 +39,6 @@ function About() {
                         <div className="w-[97%] h-[650px] mx-auto rounded-[25px] bg-[url(/assets/images/departments/everyone/spring_2025/group.jpg)] bg-cover bg-center shadow-lg shadow-gray-700">
                           {/* absolute top-[330px] right-[300px] */}
                         </div>
-                        {/* STICKERS BELOW ARE ROUGHLY RESPONSIVE */}
                         <img src={star} alt="star" className="absolute right-[15%] top-0 w-36 sm:w-24 md:w-28"/> 
                         <img src={softstar} alt="softstar" className="absolute top-[30%] left-[2%] size-16"/>
                       </div>
@@ -71,6 +70,7 @@ function About() {
                             Everybody is welcome to join us, regardless of background! Join us to find out what CSA is all about!
                         </p>
                     </motion.div>
+                    <img src={star} alt="star" className="absolute right-[10%] top-[45%] w-36 sm:w-24 md:w-28"/> 
                 </div>
             </div>
 
