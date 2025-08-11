@@ -11,13 +11,13 @@ export const FamCard = ({ fam }: Props) => (
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
     whileHover={{ y: -5, scale: 1.02 }}
-    className="w-[350px] h-[450px] rounded-[20px] bg-white shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300"
+    className="w-[400px] h-[500px] rounded-[20px] bg-white shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300"
   >
     <div className="relative">
       <img
         src={fam.image}
         alt={fam.title}
-        className="w-full h-48 object-cover"
+        className="w-full h-56 object-cover"
       />
     </div>
     <div className="p-6">

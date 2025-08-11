@@ -1,14 +1,22 @@
-import { events } from "../data/events.ts";
+import { events, announcements } from "../data/events.ts";
 import { splitEvents } from "../utils/splitEvents";
 import { EventCard } from "../components/events/EventCard.tsx";
 import { motion } from "framer-motion";
 
-
 const star = "/assets/images/misc/star.jpg";
-
 
 function Events() {
   const { upcoming, past } = splitEvents(events);
+
+  // Get only announcements that haven't expired (endDate hasn't passed)
+  const currentDate = new Date();
+  currentDate.setHours(0, 0, 0, 0); // Ignore time for date comparison
+  
+  const activeAnnouncements = announcements.filter(announcement => {
+    const endDate = new Date(announcement.endDate);
+    endDate.setHours(0, 0, 0, 0);
+    return endDate >= currentDate;
+  });
 
   return (
       <div className="mt-40 mx-36 pb-20 flex flex-col justify-center">
@@ -27,6 +35,60 @@ function Events() {
             <img src={star} alt="star" className="absolute right-[15%] top-[15%] w-36 sm:w-24 md:w-28 rotate-12"/> 
           </div>
         </div>
+
+        {/* Announcements Section - only shows when there are active announcements */}
+        {activeAnnouncements.length > 0 && (
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <div className="bg-gradient-to-r from-[#AF383C] to-[#8f2f33] rounded-[25px] p-8 shadow-lg text-white">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                  <span className="text-[#AF383C] text-2xl">📢</span>
+                </div>
+                <h2 className="text-3xl font-bold">Important Announcements</h2>
+              </div>
+              <p className="text-lg mb-8 opacity-90">
+                Stay updated with our latest announcements and upcoming highlights!
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {activeAnnouncements.map((announcement, index) => (
+                  <motion.div
+                    key={announcement.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className={`bg-white/10 backdrop-blur-sm rounded-[15px] p-6 border border-white/20`}
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center">
+                        <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-3">
+                          <span className="text-white text-sm font-bold">{index + 1}</span>
+                        </div>
+                        <h3 className="text-xl font-semibold">{announcement.title}</h3>
+                      </div>
+                    </div>
+                    <p className="text-white/80 mb-4 text-sm">
+                      {announcement.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-white/90 font-medium">
+                        {new Date(announcement.date + 'T00:00:00').toLocaleDateString('en-US', { 
+                          month: 'short', 
+                          day: 'numeric',
+                          year: 'numeric'
+                        })}
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
 
         <div>
           <motion.div 
@@ -66,4 +128,4 @@ function Events() {
   );
 }
 
-export default Events
+export default Events;

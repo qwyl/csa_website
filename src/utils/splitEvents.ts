@@ -21,6 +21,9 @@ export function splitEvents(events: Event[]) {
   // Sort both lists
   upcoming.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
   past.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  
+  // Limit past events to 8 most recent
+  const limitedPast = past.slice(0, 8);
 
-  return { upcoming, past };
+  return { upcoming, past: limitedPast };
 }

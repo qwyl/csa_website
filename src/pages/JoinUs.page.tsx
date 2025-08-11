@@ -117,7 +117,7 @@ function JoinUs() {
           </div>
 
           {/* General Member Section */}
-          <div className="mb-20">
+          <div>
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -179,8 +179,6 @@ function JoinUs() {
               </div>
             </motion.div>
           </div>
-
-          {/* Contact & Next Steps Section */}
         </div>
     );
 }
