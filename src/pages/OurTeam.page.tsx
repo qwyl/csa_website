@@ -90,33 +90,6 @@ function OurTeam() {
         ))}
       </div>
 
-      {/* Contact Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-        className="mt-20 text-center bg-white rounded-[25px] p-8 shadow-lg"
-      >
-        <h2 className="text-[#AF383C] text-[32px] font-medium mb-6">Interested in Joining Our Team?</h2>
-        <p className="text-lg mb-8 max-w-2xl mx-auto">
-          We're always looking for passionate individuals to join our team! Whether you're interested in leadership, media, events, or any other area, we'd love to hear from you.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/joinus"
-            className="bg-[#AF383C] text-white px-8 py-4 rounded-[25px] hover:bg-[#A12D30] transition duration-300 font-medium"
-          >
-            Apply Now
-          </a>
-          <a
-            href="mailto:ucbcsa@berkeley.edu"
-            className="border-2 border-[#AF383C] text-[#AF383C] px-8 py-4 rounded-[25px] hover:bg-[#AF383C] hover:text-white transition duration-300 font-medium"
-          >
-            Contact Us
-          </a>
-        </div>
-      </motion.div>
-
       {/* Modal */}
       {selectedMember && (
         <TeamMemberModal
@@ -126,10 +99,6 @@ function OurTeam() {
         />
       )}
 
-      {/* Decorative Elements */}
-      <img src={star} alt="star" className="absolute right-[10%] top-[25%] w-32 sm:w-24 md:w-28 rotate-12 opacity-70"/>
-      <img src={softstar} alt="softstar" className="absolute left-[5%] top-[35%] size-20 opacity-60"/>
-      <img src={star} alt="star" className="absolute right-[8%] bottom-[20%] w-24 rotate-45 opacity-60"/>
     </div>
   );
 }
